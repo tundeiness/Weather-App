@@ -1,0 +1,69 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato|Roboto');
+
+
+
+/*Mobile Devices*/
+
+
+html, body{
+  line-height: 1.5;
+  background-color: #f4f4f4;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.container{
+    background-color: blue;
+}
+
+.panel{
+ width: 100%;
+ margin: 0 auto;
+height: auto;
+background-color: red;
+border: 1px solid black;
+}
+
+.location{
+ background: green;
+ width: 2em;
+ height: auto;
+ border: 1px solid black;
+ float: left;
+}
+
+.loc{
+
+}
+
+.details{
+border: 1px solid black;
+float: right;
+}
+
+.describe{
+
+
+}
+
+.temperature{
+border: 1px solid black;
+float: right;
+}
+
+.temp{
+
+
+}
+
+
+
+
+
+
+
+/*Desktop and WideScreen Devices*/
