@@ -1,6 +1,6 @@
 
 
-@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato|Roboto');
+/*@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato|Roboto');
 
 
 
@@ -12,52 +12,109 @@ html, body{
   background-color: #f4f4f4;
   padding: 0;
   margin: 0;
+  font-size: 14px;
 }
 
+body{
+  background-image: linear-gradient(135deg, #ABDCFF 10%, #0396FF 100%);
+}
 
+header h1{
+  text-align: center;
+}
 
 .container{
-    background-color: blue;
+  border: 1px solid #666;
+  margin: auto;
+  background-color:#162131;
+  width: 100%;
+  height: auto;
 }
 
-.panel{
- width: 100%;
- margin: 0 auto;
-height: auto;
-background-color: red;
-border: 1px solid black;
+.container p{
+  clear: both;
+  text-align: center;
 }
 
-.location{
- background: green;
- width: 2em;
- height: auto;
- border: 1px solid black;
- float: left;
+h1{
+  color: blue;
 }
 
-.loc{
+.area{
+  width: auto;
+  border: 1px solid black;
+  height: 20vh;
+  background-color: #EDDDD4;
+  margin:5vh .5vw 0 .5vw;
+  border-radius: 5px;
+}
 
+
+.area > img{
+  display: block;
+  margin: 0 auto;
+  padding-top: 1.5vh;
+}
+
+div .location{
+  text-align: center;
 }
 
 .details{
-border: 1px solid black;
-float: right;
+  width: auto;
+  border: 1px solid black;
+  margin-top: 3px;
+  height: 25vh;
+  background-color: #4F4F56;
+  margin-left:.5vw;
+  margin-right:.5vw;
+  border-radius: 5px;
+}
+
+.icon{
+  padding-top: 3vh;
 }
 
 .describe{
-
-
+  padding-top: 5vh;
 }
 
 .temperature{
-border: 1px solid black;
-float: right;
+  width: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 10vh;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  background-color:#4F4F56;
+  margin-left:.5vw;
+  margin-right:.5vw;
 }
 
-.temp{
+.buton{
+  float: right;
+}
+
+.buton > button{
+  border-radius: 4px;
+  margin-top: 2.5vh;
+  background-color: powderblue;
+  color: black;
+  margin-right: .5vw;
 
 
+  border: none;
+  padding: 1px 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+}
+
+
+.temperature > p{
+  float: left;
+  margin: 2.5vh 0 0 3vw;
 }
 
 
