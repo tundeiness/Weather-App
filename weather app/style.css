@@ -1,6 +1,6 @@
 
 
-/*@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato|Roboto');
 
 
 
@@ -23,6 +23,10 @@ header h1{
   text-align: center;
 }
 
+
+/*CONTAINER*/
+
+
 .container{
   border: 1px solid #666;
   margin: auto;
@@ -39,6 +43,9 @@ header h1{
 h1{
   color: blue;
 }
+
+/*AREA*/
+
 
 .area{
   width: auto;
@@ -60,6 +67,9 @@ div .location{
   text-align: center;
 }
 
+
+/*DETAILS*/
+
 .details{
   width: auto;
   border: 1px solid black;
@@ -72,12 +82,19 @@ div .location{
 }
 
 .icon{
-  padding-top: 3vh;
+  padding-top: 2vh;
+  display: block;
+  margin: 0 auto;
 }
 
 .describe{
-  padding-top: 5vh;
+  padding-top: 2vh;
 }
+
+
+
+/*TEMPERATURE SECTION*/
+
 
 .temperature{
   width: auto;
@@ -116,9 +133,6 @@ div .location{
   float: left;
   margin: 2.5vh 0 0 3vw;
 }
-
-
-
 
 
 
