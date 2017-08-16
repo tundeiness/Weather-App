@@ -118,7 +118,7 @@ div .location{
 }
 
 .buton > button{
-  border-radius: 4px;
+  border-radius: 10px;
   margin-top: 2.5vh;
   background-color: powderblue;
   color: black;
