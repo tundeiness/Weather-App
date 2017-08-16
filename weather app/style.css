@@ -38,6 +38,7 @@ header > h1{
   background-color:#162131;
   width: 90%;
   height: auto;
+  overflow: hidden;
 }
 
 
