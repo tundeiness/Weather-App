@@ -207,6 +207,7 @@ header h1 {
 
   .container P{
     clear: none;
+    text-align: justify;
 
   }
 }
