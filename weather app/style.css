@@ -156,31 +156,88 @@ div .location{
 
   }
 
+  header{
+    width: 50%;
+    margin:0 auto;
+    height: 25vh;
+
+  }
+
+  header h1 {
+    padding: 50px 0 10px 0;
+    color: #000000;
+
+  }
+
+    .container P{
+      /*clear: none;*/
+  position: relative;
+  bottom: -250px;
+
+    }
+
 
   .container {
     display: grid;
-    grid-template-columns: repeat(2, 1em);
-    grid-auto-rows: repeat(2, minmax(35vh, auto));
-    grid-gap: 2px;
-    max-width: 70%;
-    max-height: 50vh;
-    margin-bottom:-50px;
+    grid-template-columns: 2em 2em;
+    grid-auto-rows: repeat(2, minmax(40vh, auto));
+    grid-gap: 1px;
+    width: 50%;
+    height: 50vh;
+
   }
 
   .area{
     grid-column: col 1 / span 2;
     grid-row: row 1 / span 2;
     background-color: green;
-    max-width: 50%;
-    max-height: 45vh;
-
+    width: 40%;
+    height: 45vh;
+    margin: 0 0 0 0;
   }
+
+  .area > img{
+    display: block;
+    margin: 0 auto;
+    padding-top: 12.5vh;
+  }
+
+  div .location{
+    text-align: justify;
+  }
+
+
+
 
   .details{
     grid-column: col 2;
     grid-row: row 1;
-
+    height: 25vh;
+    width: auto;
   }
+
+  .details{
+
+    background-color: #4F4F56;
+    margin-left:.5vw;
+    margin-right:.5vw;
+    border-radius: 5px;
+  }
+
+  .icon{
+    padding-top: 2vh;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .describe{
+    padding-top: 2vh;
+  }
+
+
+
+
+
 
   .temperature{
     grid-column: col 2;
@@ -188,26 +245,21 @@ div .location{
     background-color: red;
   }
 
+  .temperature{
+    width: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 10vh;
+  /*  margin-top: 1px;
+
+    background-color:#4F4F56;
+    margin-left:.5vw;
+    margin-right:.5vw;*/
+  }
+
   .buton, .temperature > p{
     float: none;
   }
 
-header{
-  max-width: 70%;
-  margin:0 auto;
-  max-height: 25vh;
 
-}
-
-header h1 {
-  padding: 50px 0 10px 0;
-  color: #000000;
-
-}
-
-  .container P{
-    clear: none;
-    text-align: justify;
-
-  }
 }
