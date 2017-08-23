@@ -3,32 +3,40 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="C:\Users\HRH_t\Desktop\gitRepo\weather app\style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Daily Weather</title>
   </head>
   <body>
-    <header>
-        <h1>DAILY WEATHER</h1>
-    </header>
     <div class ="container">
+      <h1 class="title">DAILY WEATHER</h1>
       <div class="area">
-        <img src="https://image.ibb.co/hVg6C5/4_pin_flat.png">
+        <img class="resize" src="https://image.ibb.co/hVg6C5/4_pin_flat.png">
         <p class="location">...</p>
       </div>
+
       <div class="details">
         <img class="icon"src="https://image.ibb.co/nEDNKk/1_cloud_cumulus_2.png">
         <p class="describe">...</p>
       </div>
+
       <div class="temperature">
-        <p class="temp">...</p>
+        <span><p class="temp">...</p></span>
         <div class="buton">
-          <button type="button" name="convert" id="targetButton">toFarenheit</button>
+          <!--<button type="button" name="convert" id="targetButton">toFarenheit</button>-->
+          <label class="switch">
+            <input type="checkbox" id="togBtn">
+            <div class="slider round"><span class="F"><strong>F</strong></span><span class="C"><strong>C</strong></span></div>
+          </label>
         </div>
       </div>
-        <p>Powered By <a href="https://codepen.io/highness/pen/wqaQwN">@tundeiness</a></p>
+
+    <div class="credits">
+      <p>Powered By <a href="https://codepen.io/highness/pen/wqaQwN">@tundeiness</a></p>
     </div>
+    
+  </div>
   <script type="text/javascript" src="C:\Users\HRH_t\Desktop\gitRepo\weather app\app.js">
   </script>
   </body>
