@@ -2,12 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato|Roboto');
 
-
-
 /*Mobile Devices*/
 
-
-html, body{
+html, body {
   line-height: 1.5;
   background-color: #f4f4f4;
   padding: 0;
@@ -15,144 +12,114 @@ html, body{
   font-size: 14px;
 }
 
-
-
-.container{
+.container {
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 1px;
   grid-template-rows: 6em 11em 12em 9em 5em;
- /* grid-auto-rows: minmax(1em, auto);*/
-  grid-gap: 1px;
-  background-color:#162131;
+  /* grid-auto-rows: minmax(5em, auto);*/
+  grid-gap: 7px;
+  background-color: #162131;
   width: 100%;
-  /*height: auto;*/
 }
 
-/*header{
-    
-    margin: 2vh .5vw 0 .5vw;
-}*/
-
-
- .title{
+.title {
   text-align: center;
-  color: blue;
-  border-radius: 5px;
-  border: 1px solid black;
- }
-
+  color: #EDDDD4;
+  font-family: 'Julius+Sans+One', sans-serif;
+}
 
 /*AREA*/
 
-
-.area{
+.area {
   width: auto;
-  border: 1px solid black;
   background-color: #EDDDD4;
-  margin:0 .5vw 0 .5vw;
+  margin: 0 1.5vw 0 1.5vw;
   border-radius: 5px;
 }
 
-
-.area > img{
+.area > img {
   display: block;
   margin: 0 auto;
   padding-top: 3.5vh;
-  max-width:100%;
+  max-width: 100%;
 }
 
-div .location{
+div .state {
   text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'roboto', sans-serif;
+  overflow: hidden;
+  color: #162131;
 }
-
-
 
 /*DETAILS*/
 
-.details{
+.details {
   width: auto;
-  border: 1px solid black;
   background-color: #4F4F56;
-  margin-left:.5vw;
-  margin-right:.5vw;
+  margin: 0 1.5vw 0 1.5vw;
   border-radius: 5px;
 }
 
-.icon{
+.icon {
   padding-top: 5vh;
   display: block;
   margin: 0 auto;
 }
 
-.describe{
+.describe {
   padding-top: 2vh;
   text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  color: #EDDDD4;
 }
-
-
 
 /*TEMPERATURE SECTION*/
 
-
-.temperature{
-
+.temperature {
   display: grid;
-  grid-template-columns:50% 50%;
-
+  grid-template-columns: 50% 50%;
   width: auto;
-  border: 1px solid black;
   border-radius: 5px;
-  /*background-color:#4F4F56;*/
-  margin-left:.5vw;
-  margin-right:.5vw;
+  margin: 0 1.5vw 0 1.5vw;
 }
 
-.temperature > span{
-  border: 1px solid black;
- border-radius: 5px;
- background-color: #EDDDD4;
- overflow: hidden;
+.temperature > span {
+  border-radius: 5px;
+  background-color: #EDDDD4;
+  overflow: hidden;
+  margin-right: 2px;
 }
 
-.temperature > span .temp{
-  margin: 7vh 23.5vw;
+.temperature > span .temp {
+  margin: 9vh 20.5vw;
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: #162131;
 }
 
-.buton{
- border: 1px solid black;
- border-radius: 5px;
- background-color: #EDDDD4;
- overflow: hidden;
+.buton {
+  border-radius: 5px;
+  background-color: #EDDDD4;
+  margin-left: 2px;
 }
 
-
-/*.buton > button{
-  border-radius: 10px;
-  background-color: powderblue;
-  color: black;
-  border: none;
-  padding: 1px 2px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 7vh 12vw;
-
-}*/
-
-.buton > .switch{
-
+.buton > .switch {
   position: relative;
-  top:38%;
+  top: 38%;
   left: 34%;
   display: inline-block;
   width: 47px;
   height: 21px;
-
 }
 
-.switch input {display:none;}
-
+.switch input {
+  display: none;
+}
 
 .slider {
   position: absolute;
@@ -192,29 +159,27 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-
-.F
-{
+.F {
   display: none;
 }
 
-.C, .F
-{
+.C, .F {
   color: black;
   position: absolute;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 80%;
   font-size: 12px;
-  font-family: Verdana, sans-serif;
+  font-family: 'Julius+Sans+One', sans-serif;
 }
 
-input:checked+ .slider .F
-{display: block;}
+input:checked + .slider .F {
+  display: block;
+}
 
-input:checked + .slider .C
-{display: none;}
-
+input:checked + .slider .C {
+  display: none;
+}
 
 .slider.round {
   border-radius: 34px;
@@ -224,243 +189,222 @@ input:checked + .slider .C
   border-radius: 50%;
 }
 
-
-.credits p{
+.credits p {
   text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
+/*DESKTOP/TABLET VERSION*/
 
 @media screen and (min-width: 460px) {
+  body {
+    background-image: -webkit-linear-gradient(
+      135deg,
+      #ABDCFF 10%,
+      #0396FF 100%
+    );
+    background-image: -moz-linear-gradient(135deg, #ABDCFF 10%, #0396FF 100%);
+    background-image: -o-linear-gradient(135deg, #ABDCFF 10%, #0396FF 100%);
+    background-image: -ms-linear-gradient(135deg, #ABDCFF 10%, #0396FF 100%);
+    background-image: linear-gradient(135deg, #ABDCFF 10%, #0396FF 100%);
+    min-height: 100vh;
+    margin: 0 auto;
+    min-width: 1280px;
+    text-align: center;
+    padding: 1px;
+  }
 
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5em 13em 15em 4em;
+    grid-column-gap: 1px;
+    /* grid-auto-rows: minmax(4em, auto);*/
+    grid-gap: 7px;
+    background-color: #162131;
+    width: 71%;
+    margin: 10% auto;
+    border-radius: 10px;
 
-body{
-  background-image: linear-gradient(135deg, #ABDCFF 10%, #0396FF 100%);
-  min-height: 100vh;
-  margin: 0 auto;
-  max-width: 1280px;
-  text-align: center;
-  padding:1px;
+    grid-template-areas: "title title"
+      "area details"
+      "area temperature"
+      "credits credits";
+  }
+
+  .title {
+    grid-area: title;
+    text-align: center;
+    color: #EDDDD4;
+    border: none;
+    width: 98%;
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+
+  /*AREA*/
+
+  .area {
+    grid-area: area;
+    width: 100%;
+    background-color: #EDDDD4;
+    border-radius: 5px;
+    margin: 0 0 0 1vw;
+  }
+
+  .area > img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 19.5vh;
+    max-width: 100%;
+  }
+
+  div .state {
+    text-align: center;
+    font-size: 1.8em;
+  }
+
+  /*DETAILS*/
+
+  .details {
+    grid-area: details;
+    width: 94%;
+
+    background-color: #4F4F56;
+
+    border-radius: 5px;
+  }
+
+  .icon {
+    padding-top: 5vh;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .describe {
+    padding-top: 1.5vh;
+    text-align: center;
+    font-size: 1.8em;
+  }
+
+  /*TEMPERATURE SECTION*/
+
+  .temperature {
+    grid-area: temperature;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    grid-gap: 2px;
+    width: 94%;
+  }
+
+  .temperature > span {
+    border-radius: 5px;
+    background-color: #4F4F56;
+    margin: 0;
+  }
+
+  .temperature > span .temp {
+    margin: 6.5vh 12.5vw;
+    color: #EDDDD4;
+    font-size: 1.8em;
+  }
+
+  .buton {
+    border-radius: 5px;
+    background-color: #4F4F56;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .buton > .switch {
+    position: relative;
+    top: 38%;
+    left: -1%;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .switch input {
+    display: none;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .F {
+    display: none;
+  }
+
+  .C, .F {
+    color: black;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 80%;
+    font-size: 12px;
+  }
+
+  input:checked + .slider .F {
+    display: block;
+  }
+
+  input:checked + .slider .C {
+    display: none;
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .credits {
+    grid-area: credits;
+    width: 96%;
+  }
+
+  .credits p {
+    text-align: center;
+    font-family: 'Julius+Sans+One', sans-serif;
+    font-size: 1.3em;
+  }
 }
-
-
-.container{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 5em 13em 15em 4em;
-  grid-column-gap: 1px;
- /* grid-auto-rows: minmax(1em, auto);*/
-  grid-gap: 7px;
-  background-color:#162131;
-  width: 71%;
-  margin: 10% auto;
-
-  grid-template-areas:
-  "title title"
-  "area details"
-  "area temperature"
-  "credits credits";
-
-}
-
-
-.title{
-  grid-area: title;
-  text-align: center;
-  color: blue;
-  border-radius: 5px;
-  border: 1px solid black;
-  width: 98%;
-  margin: 0 auto;
-  /*max-height: 20px;*/
- 
- }
-
-
- /*AREA*/
-
-
-.area{
-  grid-area: area;
-  width: 100%;
-  border: 1px solid black;
-  background-color: #EDDDD4;
-  /*margin:0 .5vw 0 .5vw;*/
-  border-radius: 5px;
-
-}
-
-
-.area > img{
-  display: block;
-  margin: 0 auto;
-  padding-top: 19.5vh;
-  max-width:100%;
-}
-
-div .location{
-  text-align: center;
-}
-
-
-
-/*DETAILS*/
-
-.details{
-  grid-area: details;
-  width: 96%;
-  border: 1px solid black;
-  background-color: #4F4F56;
-  /*margin-left:.7vw;
-  margin-right:.5vw;*/
-  border-radius: 5px;
-}
-
-.icon{
-  padding-top: 5vh;
-  display: block;
-  margin: 0 auto;
-}
-
-.describe{
-  padding-top: 1vh;
-  text-align: center;
-}
-
-
-
-/*TEMPERATURE SECTION*/
-
-
-.temperature{
-  grid-area: temperature;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows:50% 50%;
-
-  width: 96%;
-  border: 1px solid black;
-  border-radius: 5px;
-  /*background-color:#4F4F56;*/
-  /*margin-left:.5vw;
-  margin-right:.5vw;*/
-}
-
-.temperature > span{
-  border: 1px solid black;
- border-radius: 5px;
- background-color: #4F4F56;
- overflow: hidden;
-}
-
-.temperature > span .temp{
-  margin: 7vh 15.5vw;
-  color: blue;
-}
-
-.buton{
- border: 1px solid black;
- border-radius: 5px;
- background-color: #4F4F56;
- overflow: hidden;
-}
-
-
-
-.buton > .switch{
-
-  position: relative;
-  top:38%;
-  left: -1%;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-
-}
-
-.switch input {display:none;}
-
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-
-.F
-{
-  display: none;
-}
-
-.C, .F
-{
-  color: black;
-  position: absolute;
-  transform: translate(-50%,-50%);
-  top: 50%;
-  left: 80%;
-  font-size: 12px;
-  font-family: Verdana, sans-serif;
-}
-
-input:checked+ .slider .F
-{display: block;}
-
-input:checked + .slider .C
-{display: none;}
-
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-
-}
-

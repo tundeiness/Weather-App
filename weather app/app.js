@@ -1,69 +1,68 @@
 $(document).ready(function() {
+  var geolocation = navigator.geolocation;
+  geolocation.getCurrentPosition(showLocation, errorHandler);
 
+  function errorHandler(err) {
+    var error = {
+      1: "permission denied",
+      2: "Position Unavailable",
+      3: "Request Timeout"
+    };
+    alert(error[err.code]);
+  }
 
-var geolocation = navigator.geolocation;
-	  geolocation.getCurrentPosition
-	 (showLocation, errorHandler)
+  function showLocation(position) {
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
 
-  function errorHandler (err){
-     var error = {
-       1: 'permission denied',
-       2: 'Position Unavailable',
-       3: 'Request Timeout'
-      };
-      alert (  error[err.code]  )
-}
+    /*latlon converter goes here in version 2.0*/
 
-function showLocation ( position ) {
-  var lat = position.coords.latitude;
-   var lon = position.coords.longitude;
+    var baseUrl = "https://fcc-weather-api.glitch.me/";
+    var tailUrl = "api/current?lon=" + lon + "&lat=" + lat;
+    var webLink = baseUrl + tailUrl;
 
-  /*latlon converter goes here*/
+    $.ajax({
+      url: webLink,
+      type: "GET",
+      dataType: "json",
+      success: function getLocation(data) {
+        $(".icon").attr("src", data.weather[0].icon);
 
-  var baseUrl = "https://fcc-weather-api.glitch.me/";
- var tailUrl = "api/current?lon="+ lon +"&lat="+ lat;
-     var webLink = baseUrl+tailUrl;
+        var temperatureInDeg = data.main.temp;
+        var htmlAnsi = String.fromCharCode(176);
+        var metricSys = "C";
+        var imperialSys = "F";
+        var metricTemp = temperatureInDeg + htmlAnsi + metricSys;
 
+        /*Conversion of Temperature from Metric system to Imperial System */
 
-	 $.ajax ({
-	      url:webLink,
-	      type:'GET',
-	      dataType:'json',
-	      success : function getLocation(data){
-	    $(".icon").attr('src', data.weather[0].icon);
-          var deg = data.main.temp;
-          var htmlAnsi = String.fromCharCode(176);
-          var metricSys = "C";
-          var imperialSys = "F";
-          var combTemp= deg+htmlAnsi+metricSys;
-	 	  $(".temp").text(combTemp);
-          var state = data.name;
-          var country = data.sys.country;
-          var combo = state + ", " + country;
-      $(".location").text(combo);
+        var temperatureInFar = Math.round(
+          (temperatureInDeg * 9 / 5 + 32) * 10 / 10
+        );
+        var imperialTemp = temperatureInFar + htmlAnsi + imperialSys;
 
-      $(".describe").text (data.weather[0].description);
+        /*Conversion Ends*/
 
-/*Conversion from Metric system to Imperial system of measuring temperature*/
+        $(".temp").text(metricTemp);
+        var locality = data.name;
+        var country = data.sys.country;
+        var localityAndCountry = locality + ", " + country;
+        $(".state").text(localityAndCountry);
 
-      $("#targetButton").on( "click", function ( )  {
+        $(".describe").text(data.weather[0].description);
 
-       var farenheit = (deg * 9/5) + 32;
+        $("#togBtn").on("click", function() {
+          if ($(".temp").html() == metricTemp) {
+            $(".temp").html(imperialTemp);
+          } else {
+            $(".temp ").html(metricTemp);
+          }
+        });
+      },
 
-       var inFar = farenheit+htmlAnsi+imperialSys;
-
-            $(".temp").text(inFar);
-
-       });
-
-},
-
-	      error: function () {
-                alert("Something went wrong with the server...");
-            }
-
-});
-
-}
-
+      error: function() {
+        alert("Something went wrong with the server...");
+      }
+    });
+  }
 });
